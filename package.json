@@ -1,15 +1,19 @@
 {
   "name": "whatsapp-spam",
   "version": "1.0.0",
-  "description": "",
+  "description": "WhatsApp group messaging bot with REST API and invite-link moderation",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node --project tsconfig.json src/index.ts"
+    "dev": "ts-node --project tsconfig.json src/index.ts",
+    "prepare": "husky"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "whatsapp",
+    "moderation"
+  ],
+  "author": "Drew Foehn <drew@foe.hn>",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
@@ -17,9 +21,16 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
+    "husky": "^9.1.7",
     "nodemon": "^3.1.14",
+    "semantic-release": "^25.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
   }
